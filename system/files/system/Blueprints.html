@@ -1,0 +1,186 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+    <title>Reference</title>
+    <link rel="stylesheet" href="../../luadoc.css" type="text/css" />
+	<!--meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/-->
+</head>
+
+<body>
+<div id="container">
+
+<div id="product">
+	<div id="product_logo"></div>
+	<div id="product_name"><big><b></b></big></div>
+	<div id="product_description"></div>
+</div> <!-- id="product" -->
+
+<div id="main">
+
+<div id="navigation">
+
+
+<h1>LuaDoc</h1>
+<ul>
+	
+	<li><a href="../../index.html">Index</a></li>
+	
+</ul>
+
+
+<!-- Module list -->
+
+
+
+<!-- File list -->
+
+<h1>Files</h1>
+<ul>
+
+	<li><strong>system/Blueprints.lua</strong></li>
+	
+	<li>
+		<a href="../../files/system/GlobalBaseTemplate.html">system/GlobalBaseTemplate.lua</a>
+	</li>
+
+	<li>
+		<a href="../../files/system/GlobalBuilderGroup.html">system/GlobalBuilderGroup.lua</a>
+	</li>
+
+	<li>
+		<a href="../../files/system/GlobalBuilderTemplate.html">system/GlobalBuilderTemplate.lua</a>
+	</li>
+
+	<li>
+		<a href="../../files/system/GlobalPlatoonTemplate.html">system/GlobalPlatoonTemplate.lua</a>
+	</li>
+
+	<li>
+		<a href="../../files/system/class.html">system/class.lua</a>
+	</li>
+
+	<li>
+		<a href="../../files/system/dkson.html">system/dkson.lua</a>
+	</li>
+
+	<li>
+		<a href="../../files/system/repr.html">system/repr.lua</a>
+	</li>
+
+	<li>
+		<a href="../../files/system/setutils.html">system/setutils.lua</a>
+	</li>
+
+	<li>
+		<a href="../../files/system/utils.html">system/utils.lua</a>
+	</li>
+
+</ul>
+
+
+
+
+
+
+</div> <!-- id="navigation" -->
+
+<div id="content">
+
+<h1>File <code>system/Blueprints.lua</code></h1>
+
+
+
+
+
+
+
+<h2>Functions</h2>
+<table class="function_list">
+
+	<tr>
+	<td class="name" nowrap><a href="#LoadBlueprints">LoadBlueprints</a>&nbsp;(pattern, directories, mods, skipGameFiles, skipExtraction, skipRegistration)</td>
+	<td class="summary">Loads all blueprints with optional parameters </td>
+	</tr>
+
+</table>
+
+
+
+
+
+
+<br/>
+<br/>
+
+
+
+
+<h2><a name="functions"></a>Functions</h2>
+<dl class="function">
+
+
+
+<dt><a name="LoadBlueprints"></a><strong>LoadBlueprints</strong>&nbsp;(pattern, directories, mods, skipGameFiles, skipExtraction, skipRegistration)</dt>
+<dd>
+Loads all blueprints with optional parameters
+
+
+<h3>Parameters</h3>
+<ul>
+	
+	<li>
+	  pattern: - specifies pattern of files to load, defaults to '*.bp'
+	</li>
+	
+	<li>
+	  directories: - specifies table of directory paths to load blueprints from, defaults to all directories
+	</li>
+	
+	<li>
+	  mods: - specifies table of mods to load blueprints from, defaults to active mods
+	</li>
+	
+	<li>
+	  skipGameFiles: - specifies whether skip loading original game files, defaults to false
+	</li>
+	
+	<li>
+	  skipExtraction: - specifies whether skip extraction of meshes, defaults to false
+	</li>
+	
+	<li>
+	  skipRegistration: - specifies whether skip registration of blueprints, defaults to false NOTE now it supports loading blueprints on UI-side in addition to loading on Sim-side Sim -> LoadBlueprints() - no arguments, no changes! UI  -> LoadBlueprints('*_unit.bp', {'/units'}, mods, true, true, true)  used in ModsManager.lua UI  -> LoadBlueprints('*_unit.bp', {'/units'}, mods, false, true, true) used in UnitsAnalyzer.lua
+	</li>
+	
+</ul>
+
+
+
+
+
+
+
+
+</dd>
+
+
+</dl>
+
+
+
+
+
+
+
+</div> <!-- id="content" -->
+
+</div> <!-- id="main" -->
+
+<div id="about">
+	<p><a href="http://validator.w3.org/check?uri=referer"><img src="http://www.w3.org/Icons/valid-xhtml10" alt="Valid XHTML 1.0!" height="31" width="88" /></a></p>
+</div> <!-- id="about" -->
+
+</div> <!-- id="container" -->	
+</body>
+</html>

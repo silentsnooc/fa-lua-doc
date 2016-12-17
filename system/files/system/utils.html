@@ -1,0 +1,1607 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+    <title>Reference</title>
+    <link rel="stylesheet" href="../../luadoc.css" type="text/css" />
+	<!--meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/-->
+</head>
+
+<body>
+<div id="container">
+
+<div id="product">
+	<div id="product_logo"></div>
+	<div id="product_name"><big><b></b></big></div>
+	<div id="product_description"></div>
+</div> <!-- id="product" -->
+
+<div id="main">
+
+<div id="navigation">
+
+
+<h1>LuaDoc</h1>
+<ul>
+	
+	<li><a href="../../index.html">Index</a></li>
+	
+</ul>
+
+
+<!-- Module list -->
+
+
+
+<!-- File list -->
+
+<h1>Files</h1>
+<ul>
+
+	<li>
+		<a href="../../files/system/Blueprints.html">system/Blueprints.lua</a>
+	</li>
+
+	<li>
+		<a href="../../files/system/GlobalBaseTemplate.html">system/GlobalBaseTemplate.lua</a>
+	</li>
+
+	<li>
+		<a href="../../files/system/GlobalBuilderGroup.html">system/GlobalBuilderGroup.lua</a>
+	</li>
+
+	<li>
+		<a href="../../files/system/GlobalBuilderTemplate.html">system/GlobalBuilderTemplate.lua</a>
+	</li>
+
+	<li>
+		<a href="../../files/system/GlobalPlatoonTemplate.html">system/GlobalPlatoonTemplate.lua</a>
+	</li>
+
+	<li>
+		<a href="../../files/system/class.html">system/class.lua</a>
+	</li>
+
+	<li>
+		<a href="../../files/system/dkson.html">system/dkson.lua</a>
+	</li>
+
+	<li>
+		<a href="../../files/system/repr.html">system/repr.lua</a>
+	</li>
+
+	<li>
+		<a href="../../files/system/setutils.html">system/setutils.lua</a>
+	</li>
+
+	<li><strong>system/utils.lua</strong></li>
+	
+</ul>
+
+
+
+
+
+
+</div> <!-- id="navigation" -->
+
+<div id="content">
+
+<h1>File <code>system/utils.lua</code></h1>
+
+
+
+
+
+
+
+<h2>Functions</h2>
+<table class="function_list">
+
+	<tr>
+	<td class="name" nowrap><a href="#RandomIter">RandomIter</a>&nbsp;(someSet)</td>
+	<td class="summary">Summary ends with a period.</td>
+	</tr>
+
+	<tr>
+	<td class="name" nowrap><a href="#Sort">Sort</a>&nbsp;(itemA, itemB)</td>
+	<td class="summary">Sorts two variables based on their numeric value or alpha order (strings) </td>
+	</tr>
+
+	<tr>
+	<td class="name" nowrap><a href="#StringCapitalize">StringCapitalize</a>&nbsp;(str)</td>
+	<td class="summary">Capitalizes each word in specified string e.g.</td>
+	</tr>
+
+	<tr>
+	<td class="name" nowrap><a href="#StringComma">StringComma</a>&nbsp;(value)</td>
+	<td class="summary">Adds comma as thousands separator in specified value e.g.</td>
+	</tr>
+
+	<tr>
+	<td class="name" nowrap><a href="#StringExtract">StringExtract</a>&nbsp;(str, str1, str2, fromEnd)</td>
+	<td class="summary">Extracts a string between two specified strings e.g.</td>
+	</tr>
+
+	<tr>
+	<td class="name" nowrap><a href="#StringJoin">StringJoin</a>&nbsp;(items, delimiter)</td>
+	<td class="summary">Returns items as a single string, separated by the delimiter </td>
+	</tr>
+
+	<tr>
+	<td class="name" nowrap><a href="#StringPrepend">StringPrepend</a>&nbsp;(str, symbol)</td>
+	<td class="summary">Prepends a string with specified symbol or one space </td>
+	</tr>
+
+	<tr>
+	<td class="name" nowrap><a href="#StringReverse">StringReverse</a>&nbsp;(str)</td>
+	<td class="summary">Reverses order of letters for specified string e.g.</td>
+	</tr>
+
+	<tr>
+	<td class="name" nowrap><a href="#StringSplit">StringSplit</a>&nbsp;(str, sep)</td>
+	<td class="summary">"explode" a string into a series of tokens, using a separator character `sep` </td>
+	</tr>
+
+	<tr>
+	<td class="name" nowrap><a href="#StringSplitCamel">StringSplitCamel</a>&nbsp;(str)</td>
+	<td class="summary">Splits a string with camel cast to a string with separate words e.g.</td>
+	</tr>
+
+	<tr>
+	<td class="name" nowrap><a href="#StringStartsWith">StringStartsWith</a>&nbsp;(stringToMatch, valueToSeek)</td>
+	<td class="summary">Returns true if the string starts with the specified value </td>
+	</tr>
+
+	<tr>
+	<td class="name" nowrap><a href="#TimerStart">TimerStart</a>&nbsp;()</td>
+	<td class="summary">Starts timer to check how long a process is taking, useful for optimization </td>
+	</tr>
+
+	<tr>
+	<td class="name" nowrap><a href="#TimerStop">TimerStop</a>&nbsp;()</td>
+	<td class="summary">Stops timer and returns how much time a process took from calling TimerStart() </td>
+	</tr>
+
+	<tr>
+	<td class="name" nowrap><a href="#math.clamp">math.clamp</a>&nbsp;(v, min, max)</td>
+	<td class="summary">Clamps numeric value to specified Min and Max range </td>
+	</tr>
+
+	<tr>
+	<td class="name" nowrap><a href="#safecall">safecall</a>&nbsp;(msg, fn, ...)</td>
+	<td class="summary">safecall(msg, fn, ...) calls the given function with the given args, and catches any error and logs a warning including the given message.</td>
+	</tr>
+
+	<tr>
+	<td class="name" nowrap><a href="#sort_by">sort_by</a>&nbsp;(field)</td>
+	<td class="summary">sort_by(field) provides a handy comparison function for sorting a list of tables by some field.</td>
+	</tr>
+
+	<tr>
+	<td class="name" nowrap><a href="#sortedpairs">sortedpairs</a>&nbsp;(t, comp)</td>
+	<td class="summary">Iterates over a table in key-sorted order: for k,v in sortedpairs(t) do print(k,v) end </td>
+	</tr>
+
+	<tr>
+	<td class="name" nowrap><a href="#table.assimilate">table.assimilate</a>&nbsp;(t1, t2)</td>
+	<td class="summary">Write all undefined keys from t2 into t1.</td>
+	</tr>
+
+	<tr>
+	<td class="name" nowrap><a href="#table.cat">table.cat</a>&nbsp;(t1, t2)</td>
+	<td class="summary">table.cat(t1, t2) performs a shallow "merge" of t1 and t2, where t1 and t2 are expected to be numerically keyed (existing keys are discarded).</td>
+	</tr>
+
+	<tr>
+	<td class="name" nowrap><a href="#table.concatenate">table.concatenate</a>&nbsp;(...)</td>
+	<td class="summary">Concatenate arbitrarily-many tables (equivalent to table.cat, but varargs.</td>
+	</tr>
+
+	<tr>
+	<td class="name" nowrap><a href="#table.concatkeys">table.concatkeys</a>&nbsp;(t, sep)</td>
+	<td class="summary">Concatenate keys of a table into a string and separates them by optional string.</td>
+	</tr>
+
+	<tr>
+	<td class="name" nowrap><a href="#table.copy">table.copy</a>&nbsp;(t)</td>
+	<td class="summary">table.copy(t) returns a shallow copy of t.</td>
+	</tr>
+
+	<tr>
+	<td class="name" nowrap><a href="#table.deepcopy">table.deepcopy</a>&nbsp;(t, backrefs)</td>
+	<td class="summary">table.deepcopy(t) returns a copy of t with all sub-tables also copied.</td>
+	</tr>
+
+	<tr>
+	<td class="name" nowrap><a href="#table.destructiveCat">table.destructiveCat</a>&nbsp;(t1, t2)</td>
+	<td class="summary">Destructively concatenate two tables.</td>
+	</tr>
+
+	<tr>
+	<td class="name" nowrap><a href="#table.empty">table.empty</a>&nbsp;(t)</td>
+	<td class="summary">table.empty(t) returns true iff t has no keys/values.</td>
+	</tr>
+
+	<tr>
+	<td class="name" nowrap><a href="#table.equal">table.equal</a>&nbsp;(t1, t2)</td>
+	<td class="summary">table.equal(t1,t2) returns true iff t1 and t2 contain the same key/value pairs.</td>
+	</tr>
+
+	<tr>
+	<td class="name" nowrap><a href="#table.filter">table.filter</a>&nbsp;(t, filterFunc)</td>
+	<td class="summary">Filter a table using a function.</td>
+	</tr>
+
+	<tr>
+	<td class="name" nowrap><a href="#table.find">table.find</a>&nbsp;(t, val)</td>
+	<td class="summary">table.contains(t,val) returns the key for val if it is in t table.</td>
+	</tr>
+
+	<tr>
+	<td class="name" nowrap><a href="#table.getsize">table.getsize</a>&nbsp;(t)</td>
+	<td class="summary">Returns actual size of a table, including string keys </td>
+	</tr>
+
+	<tr>
+	<td class="name" nowrap><a href="#table.hash">table.hash</a>&nbsp;(t)</td>
+	<td class="summary">Converts a table to a new table with values as keys and values equal to true </td>
+	</tr>
+
+	<tr>
+	<td class="name" nowrap><a href="#table.indexize">table.indexize</a>&nbsp;(t)</td>
+	<td class="summary">Converts hash table to a new table with keys from 1 to size of table and the same values it is useful for preparing hash table before sorting its values table.indexize { ['a'] = 'one', ['b'] = 'two', ['c'] = 'three' } => {   [1] = 'one',   [2] = 'two',   [3] = 'three' } </td>
+	</tr>
+
+	<tr>
+	<td class="name" nowrap><a href="#table.inverse">table.inverse</a>&nbsp;(t)</td>
+	<td class="summary">Returns a table with keys and values from t reversed.</td>
+	</tr>
+
+	<tr>
+	<td class="name" nowrap><a href="#table.keys">table.keys</a>&nbsp;(t, comp)</td>
+	<td class="summary">table.keys(t, [comp]) -- Return a list of the keys of t, sorted.</td>
+	</tr>
+
+	<tr>
+	<td class="name" nowrap><a href="#table.map">table.map</a>&nbsp;(fn, t)</td>
+	<td class="summary">table.map(fn,t) returns a table with the same keys as t but with fn function applied to each value.</td>
+	</tr>
+
+	<tr>
+	<td class="name" nowrap><a href="#table.merged">table.merged</a>&nbsp;(t1, t2)</td>
+	<td class="summary">table.merged(t1,t2) returns a table in which fields from t2 overwrite fields from t1.</td>
+	</tr>
+
+	<tr>
+	<td class="name" nowrap><a href="#table.print">table.print</a>&nbsp;(tbl, tblPrefix, printer)</td>
+	<td class="summary">Prints keys and values of a table and sub-tables if present </td>
+	</tr>
+
+	<tr>
+	<td class="name" nowrap><a href="#table.removeByValue">table.removeByValue</a>&nbsp;(t, val)</td>
+	<td class="summary">table.removeByValue(t,val) remove a field by value instead of by index </td>
+	</tr>
+
+	<tr>
+	<td class="name" nowrap><a href="#table.reverse">table.reverse</a>&nbsp;(t)</td>
+	<td class="summary">Reverses order of values in a table using their index table.reverse {'one','two','three'} => {'three', 'two', 'one'} </td>
+	</tr>
+
+	<tr>
+	<td class="name" nowrap><a href="#table.shuffle">table.shuffle</a>&nbsp;(t)</td>
+	<td class="summary">table.shuffle(t) returns a shuffled table </td>
+	</tr>
+
+	<tr>
+	<td class="name" nowrap><a href="#table.sorted">table.sorted</a>&nbsp;(t, comp)</td>
+	<td class="summary">table.sorted(t, [comp]) is the same as table.sort(t, comp) except it returns a sorted copy of t, leaving the original unchanged.</td>
+	</tr>
+
+	<tr>
+	<td class="name" nowrap><a href="#table.subset">table.subset</a>&nbsp;(t1, t2)</td>
+	<td class="summary">table.subset(t1,t2) returns true iff every key/value pair in t1 is also in t2 </td>
+	</tr>
+
+	<tr>
+	<td class="name" nowrap><a href="#table.subtract">table.subtract</a>&nbsp;(t1, t2)</td>
+	<td class="summary">Remove all keys in t2 from t1.</td>
+	</tr>
+
+	<tr>
+	<td class="name" nowrap><a href="#table.unique">table.unique</a>&nbsp;(t)</td>
+	<td class="summary">Returns a new table with unique values </td>
+	</tr>
+
+	<tr>
+	<td class="name" nowrap><a href="#table.values">table.values</a>&nbsp;(t)</td>
+	<td class="summary">table.values(t) Return a list of the values of t, in unspecified order.</td>
+	</tr>
+
+</table>
+
+
+
+
+
+
+<br/>
+<br/>
+
+
+
+
+<h2><a name="functions"></a>Functions</h2>
+<dl class="function">
+
+
+
+<dt><a name="RandomIter"></a><strong>RandomIter</strong>&nbsp;(someSet)</dt>
+<dd>
+Summary ends with a period. Some description, can be over several lines. RandomIter(table) returns a function that when called, returns a pseudo-random element of the supplied table. Each element of the table will be returned once. This is essentially for "shuffling" sets.
+
+
+<h3>Parameters</h3>
+<ul>
+	
+	<li>
+	  someSet: first parameter
+	</li>
+	
+</ul>
+
+
+
+
+
+
+<h3>Return value:</h3>
+Don't know
+
+
+
+</dd>
+
+
+
+
+<dt><a name="Sort"></a><strong>Sort</strong>&nbsp;(itemA, itemB)</dt>
+<dd>
+Sorts two variables based on their numeric value or alpha order (strings)
+
+
+<h3>Parameters</h3>
+<ul>
+	
+	<li>
+	  itemA: 
+	</li>
+	
+	<li>
+	  itemB: 
+	</li>
+	
+</ul>
+
+
+
+
+
+
+
+
+</dd>
+
+
+
+
+<dt><a name="StringCapitalize"></a><strong>StringCapitalize</strong>&nbsp;(str)</dt>
+<dd>
+Capitalizes each word in specified string e.g. StringCapitalize('hello supreme commander') --> Hello Supreme Commander
+
+
+<h3>Parameters</h3>
+<ul>
+	
+	<li>
+	  str: 
+	</li>
+	
+</ul>
+
+
+
+
+
+
+
+
+</dd>
+
+
+
+
+<dt><a name="StringComma"></a><strong>StringComma</strong>&nbsp;(value)</dt>
+<dd>
+Adds comma as thousands separator in specified value e.g. StringComma(10000) --> 10,000
+
+
+<h3>Parameters</h3>
+<ul>
+	
+	<li>
+	  value: 
+	</li>
+	
+</ul>
+
+
+
+
+
+
+
+
+</dd>
+
+
+
+
+<dt><a name="StringExtract"></a><strong>StringExtract</strong>&nbsp;(str, str1, str2, fromEnd)</dt>
+<dd>
+Extracts a string between two specified strings e.g. StringExtract('/path/name_end.lua', '/', '_end', true) --> name
+
+
+<h3>Parameters</h3>
+<ul>
+	
+	<li>
+	  str: 
+	</li>
+	
+	<li>
+	  str1: 
+	</li>
+	
+	<li>
+	  str2: 
+	</li>
+	
+	<li>
+	  fromEnd: 
+	</li>
+	
+</ul>
+
+
+
+
+
+
+
+
+</dd>
+
+
+
+
+<dt><a name="StringJoin"></a><strong>StringJoin</strong>&nbsp;(items, delimiter)</dt>
+<dd>
+Returns items as a single string, separated by the delimiter
+
+
+<h3>Parameters</h3>
+<ul>
+	
+	<li>
+	  items: 
+	</li>
+	
+	<li>
+	  delimiter: 
+	</li>
+	
+</ul>
+
+
+
+
+
+
+
+
+</dd>
+
+
+
+
+<dt><a name="StringPrepend"></a><strong>StringPrepend</strong>&nbsp;(str, symbol)</dt>
+<dd>
+Prepends a string with specified symbol or one space
+
+
+<h3>Parameters</h3>
+<ul>
+	
+	<li>
+	  str: 
+	</li>
+	
+	<li>
+	  symbol: 
+	</li>
+	
+</ul>
+
+
+
+
+
+
+
+
+</dd>
+
+
+
+
+<dt><a name="StringReverse"></a><strong>StringReverse</strong>&nbsp;(str)</dt>
+<dd>
+Reverses order of letters for specified string e.g. StringCapitalize('abc123') --> 321cba
+
+
+<h3>Parameters</h3>
+<ul>
+	
+	<li>
+	  str: 
+	</li>
+	
+</ul>
+
+
+
+
+
+
+
+
+</dd>
+
+
+
+
+<dt><a name="StringSplit"></a><strong>StringSplit</strong>&nbsp;(str, sep)</dt>
+<dd>
+"explode" a string into a series of tokens, using a separator character `sep`
+
+
+<h3>Parameters</h3>
+<ul>
+	
+	<li>
+	  str: 
+	</li>
+	
+	<li>
+	  sep: 
+	</li>
+	
+</ul>
+
+
+
+
+
+
+
+
+</dd>
+
+
+
+
+<dt><a name="StringSplitCamel"></a><strong>StringSplitCamel</strong>&nbsp;(str)</dt>
+<dd>
+Splits a string with camel cast to a string with separate words e.g. StringSplitCamel('SupportCommanderUnit') -> 'Support Commander Unit'
+
+
+<h3>Parameters</h3>
+<ul>
+	
+	<li>
+	  str: 
+	</li>
+	
+</ul>
+
+
+
+
+
+
+
+
+</dd>
+
+
+
+
+<dt><a name="StringStartsWith"></a><strong>StringStartsWith</strong>&nbsp;(stringToMatch, valueToSeek)</dt>
+<dd>
+Returns true if the string starts with the specified value
+
+
+<h3>Parameters</h3>
+<ul>
+	
+	<li>
+	  stringToMatch: 
+	</li>
+	
+	<li>
+	  valueToSeek: 
+	</li>
+	
+</ul>
+
+
+
+
+
+
+
+
+</dd>
+
+
+
+
+<dt><a name="TimerStart"></a><strong>TimerStart</strong>&nbsp;()</dt>
+<dd>
+Starts timer to check how long a process is taking, useful for optimization
+
+
+
+
+
+
+
+
+
+</dd>
+
+
+
+
+<dt><a name="TimerStop"></a><strong>TimerStop</strong>&nbsp;()</dt>
+<dd>
+Stops timer and returns how much time a process took from calling TimerStart()
+
+
+
+
+
+
+
+
+
+</dd>
+
+
+
+
+<dt><a name="math.clamp"></a><strong>math.clamp</strong>&nbsp;(v, min, max)</dt>
+<dd>
+Clamps numeric value to specified Min and Max range
+
+
+<h3>Parameters</h3>
+<ul>
+	
+	<li>
+	  v: 
+	</li>
+	
+	<li>
+	  min: 
+	</li>
+	
+	<li>
+	  max: 
+	</li>
+	
+</ul>
+
+
+
+
+
+
+
+
+</dd>
+
+
+
+
+<dt><a name="safecall"></a><strong>safecall</strong>&nbsp;(msg, fn, ...)</dt>
+<dd>
+safecall(msg, fn, ...) calls the given function with the given args, and catches any error and logs a warning including the given message. Returns nil if the function failed, otherwise returns the function's result.
+
+
+<h3>Parameters</h3>
+<ul>
+	
+	<li>
+	  msg: 
+	</li>
+	
+	<li>
+	  fn: 
+	</li>
+	
+	<li>
+	  ...: 
+	</li>
+	
+</ul>
+
+
+
+
+
+
+
+
+</dd>
+
+
+
+
+<dt><a name="sort_by"></a><strong>sort_by</strong>&nbsp;(field)</dt>
+<dd>
+sort_by(field) provides a handy comparison function for sorting a list of tables by some field.  For example, my_list={ {name="Fred", ...}, {name="Wilma", ...}, {name="Betty", ...} ... }  table.sort(my_list, sort_by 'name') to get names in increasing order  table.sort(my_list, sort_down_by 'name') to get names in decreasing order
+
+
+<h3>Parameters</h3>
+<ul>
+	
+	<li>
+	  field: 
+	</li>
+	
+</ul>
+
+
+
+
+
+
+
+
+</dd>
+
+
+
+
+<dt><a name="sortedpairs"></a><strong>sortedpairs</strong>&nbsp;(t, comp)</dt>
+<dd>
+Iterates over a table in key-sorted order: for k,v in sortedpairs(t) do print(k,v) end
+
+
+<h3>Parameters</h3>
+<ul>
+	
+	<li>
+	  t: 
+	</li>
+	
+	<li>
+	  comp: is an optional comparison function, defaulting to less-than.
+	</li>
+	
+</ul>
+
+
+
+
+
+
+
+
+</dd>
+
+
+
+
+<dt><a name="table.assimilate"></a><strong>table.assimilate</strong>&nbsp;(t1, t2)</dt>
+<dd>
+Write all undefined keys from t2 into t1.
+
+
+<h3>Parameters</h3>
+<ul>
+	
+	<li>
+	  t1: 
+	</li>
+	
+	<li>
+	  t2: 
+	</li>
+	
+</ul>
+
+
+
+
+
+
+
+
+</dd>
+
+
+
+
+<dt><a name="table.cat"></a><strong>table.cat</strong>&nbsp;(t1, t2)</dt>
+<dd>
+table.cat(t1, t2) performs a shallow "merge" of t1 and t2, where t1 and t2 are expected to be numerically keyed (existing keys are discarded). e.g. table.cat({1, 2, 3}, {'A', 'House', 3.14})  ->  {1, 2, 3, 'A', 'House', 3.14}
+
+
+<h3>Parameters</h3>
+<ul>
+	
+	<li>
+	  t1: 
+	</li>
+	
+	<li>
+	  t2: 
+	</li>
+	
+</ul>
+
+
+
+
+
+
+
+
+</dd>
+
+
+
+
+<dt><a name="table.concatenate"></a><strong>table.concatenate</strong>&nbsp;(...)</dt>
+<dd>
+Concatenate arbitrarily-many tables (equivalent to table.cat, but varargs. Slightly more overhead, but can constructively concat *all* the things)
+
+
+<h3>Parameters</h3>
+<ul>
+	
+	<li>
+	  ...: 
+	</li>
+	
+</ul>
+
+
+
+
+
+
+
+
+</dd>
+
+
+
+
+<dt><a name="table.concatkeys"></a><strong>table.concatkeys</strong>&nbsp;(t, sep)</dt>
+<dd>
+Concatenate keys of a table into a string and separates them by optional string.
+
+
+<h3>Parameters</h3>
+<ul>
+	
+	<li>
+	  t: 
+	</li>
+	
+	<li>
+	  sep: 
+	</li>
+	
+</ul>
+
+
+
+
+
+
+
+
+</dd>
+
+
+
+
+<dt><a name="table.copy"></a><strong>table.copy</strong>&nbsp;(t)</dt>
+<dd>
+table.copy(t) returns a shallow copy of t.
+
+
+<h3>Parameters</h3>
+<ul>
+	
+	<li>
+	  t: 
+	</li>
+	
+</ul>
+
+
+
+
+
+
+
+
+</dd>
+
+
+
+
+<dt><a name="table.deepcopy"></a><strong>table.deepcopy</strong>&nbsp;(t, backrefs)</dt>
+<dd>
+table.deepcopy(t) returns a copy of t with all sub-tables also copied.
+
+
+<h3>Parameters</h3>
+<ul>
+	
+	<li>
+	  t: 
+	</li>
+	
+	<li>
+	  backrefs: 
+	</li>
+	
+</ul>
+
+
+
+
+
+
+
+
+</dd>
+
+
+
+
+<dt><a name="table.destructiveCat"></a><strong>table.destructiveCat</strong>&nbsp;(t1, t2)</dt>
+<dd>
+Destructively concatenate two tables. (numerical keys only) Appends the keys of t2 onto t1, returning it. The original t1 is destroyed, but this avoids the need to copy the values in t1, saving some time.
+
+
+<h3>Parameters</h3>
+<ul>
+	
+	<li>
+	  t1: 
+	</li>
+	
+	<li>
+	  t2: 
+	</li>
+	
+</ul>
+
+
+
+
+
+
+
+
+</dd>
+
+
+
+
+<dt><a name="table.empty"></a><strong>table.empty</strong>&nbsp;(t)</dt>
+<dd>
+table.empty(t) returns true iff t has no keys/values.
+
+
+<h3>Parameters</h3>
+<ul>
+	
+	<li>
+	  t: 
+	</li>
+	
+</ul>
+
+
+
+
+
+
+
+
+</dd>
+
+
+
+
+<dt><a name="table.equal"></a><strong>table.equal</strong>&nbsp;(t1, t2)</dt>
+<dd>
+table.equal(t1,t2) returns true iff t1 and t2 contain the same key/value pairs.
+
+
+<h3>Parameters</h3>
+<ul>
+	
+	<li>
+	  t1: 
+	</li>
+	
+	<li>
+	  t2: 
+	</li>
+	
+</ul>
+
+
+
+
+
+
+
+
+</dd>
+
+
+
+
+<dt><a name="table.filter"></a><strong>table.filter</strong>&nbsp;(t, filterFunc)</dt>
+<dd>
+Filter a table using a function.
+
+
+<h3>Parameters</h3>
+<ul>
+	
+	<li>
+	  t: Table to filter
+	</li>
+	
+	<li>
+	  filterFunc: Decision function to use to filter the table.
+	</li>
+	
+</ul>
+
+
+
+
+
+
+<h3>Return value:</h3>
+A new table containing every mapping from t for which filterFunc returns `true` when passed the value.
+
+
+
+</dd>
+
+
+
+
+<dt><a name="table.find"></a><strong>table.find</strong>&nbsp;(t, val)</dt>
+<dd>
+table.contains(t,val) returns the key for val if it is in t table. Otherwise, return nil
+
+
+<h3>Parameters</h3>
+<ul>
+	
+	<li>
+	  t: 
+	</li>
+	
+	<li>
+	  val: 
+	</li>
+	
+</ul>
+
+
+
+
+
+
+
+
+</dd>
+
+
+
+
+<dt><a name="table.getsize"></a><strong>table.getsize</strong>&nbsp;(t)</dt>
+<dd>
+Returns actual size of a table, including string keys
+
+
+<h3>Parameters</h3>
+<ul>
+	
+	<li>
+	  t: 
+	</li>
+	
+</ul>
+
+
+
+
+
+
+
+
+</dd>
+
+
+
+
+<dt><a name="table.hash"></a><strong>table.hash</strong>&nbsp;(t)</dt>
+<dd>
+Converts a table to a new table with values as keys and values equal to true
+
+
+<h3>Parameters</h3>
+<ul>
+	
+	<li>
+	  t: 
+	</li>
+	
+</ul>
+
+
+
+
+
+
+
+
+</dd>
+
+
+
+
+<dt><a name="table.indexize"></a><strong>table.indexize</strong>&nbsp;(t)</dt>
+<dd>
+Converts hash table to a new table with keys from 1 to size of table and the same values it is useful for preparing hash table before sorting its values table.indexize { ['a'] = 'one', ['b'] = 'two', ['c'] = 'three' } => {   [1] = 'one',   [2] = 'two',   [3] = 'three' }
+
+
+<h3>Parameters</h3>
+<ul>
+	
+	<li>
+	  t: 
+	</li>
+	
+</ul>
+
+
+
+
+
+
+
+
+</dd>
+
+
+
+
+<dt><a name="table.inverse"></a><strong>table.inverse</strong>&nbsp;(t)</dt>
+<dd>
+Returns a table with keys and values from t reversed. e.g. table.inverse {'one','two','three'} => {one=1, two=2, three=3} table.inverse {foo=17, bar=100}     => {[17]=foo, [100]=bar} If t contains duplicate values, it is unspecified which one will be returned. e.g. table.inverse {foo='x', bar='x'} => possibly {x='bar'} or {x='foo'}
+
+
+<h3>Parameters</h3>
+<ul>
+	
+	<li>
+	  t: 
+	</li>
+	
+</ul>
+
+
+
+
+
+
+
+
+</dd>
+
+
+
+
+<dt><a name="table.keys"></a><strong>table.keys</strong>&nbsp;(t, comp)</dt>
+<dd>
+table.keys(t, [comp]) -- Return a list of the keys of t, sorted. [comp] is an optional comparison function, defaulting to less-than.
+
+
+<h3>Parameters</h3>
+<ul>
+	
+	<li>
+	  t: 
+	</li>
+	
+	<li>
+	  comp: 
+	</li>
+	
+</ul>
+
+
+
+
+
+
+
+
+</dd>
+
+
+
+
+<dt><a name="table.map"></a><strong>table.map</strong>&nbsp;(fn, t)</dt>
+<dd>
+table.map(fn,t) returns a table with the same keys as t but with fn function applied to each value.
+
+
+<h3>Parameters</h3>
+<ul>
+	
+	<li>
+	  fn: 
+	</li>
+	
+	<li>
+	  t: 
+	</li>
+	
+</ul>
+
+
+
+
+
+
+
+
+</dd>
+
+
+
+
+<dt><a name="table.merged"></a><strong>table.merged</strong>&nbsp;(t1, t2)</dt>
+<dd>
+table.merged(t1,t2) returns a table in which fields from t2 overwrite fields from t1. Neither t1 nor t2 is modified. The returned table may share structure with either t1 or t2, so it is not safe to modify. e.g.  t1 = { x=1, y=2, sub1={z=3}, sub2={w=4} } t2 = { y=5, sub1={a=6}, sub2="Fred" } merged(t1,t2) -> { x=1, y=5, sub1={a=6,z=3}, sub2="Fred" } merged(t2,t1) -> { x=1, y=2, sub1={a=6,z=3}, sub2={w=4} }
+
+
+<h3>Parameters</h3>
+<ul>
+	
+	<li>
+	  t1: 
+	</li>
+	
+	<li>
+	  t2: 
+	</li>
+	
+</ul>
+
+
+
+
+
+
+
+
+</dd>
+
+
+
+
+<dt><a name="table.print"></a><strong>table.print</strong>&nbsp;(tbl, tblPrefix, printer)</dt>
+<dd>
+Prints keys and values of a table and sub-tables if present
+
+
+<h3>Parameters</h3>
+<ul>
+	
+	<li>
+	  tbl: specifies a table to print
+	</li>
+	
+	<li>
+	  tblPrefix: specifies optional table prefix/name
+	</li>
+	
+	<li>
+	  printer: specifies optional message printer: LOG, WARN, error, etc. e.g. table.print(categories) table.print(categories, 'categories') table.print(categories, 'categories', 'WARN')
+	</li>
+	
+</ul>
+
+
+
+
+
+
+
+
+</dd>
+
+
+
+
+<dt><a name="table.removeByValue"></a><strong>table.removeByValue</strong>&nbsp;(t, val)</dt>
+<dd>
+table.removeByValue(t,val) remove a field by value instead of by index
+
+
+<h3>Parameters</h3>
+<ul>
+	
+	<li>
+	  t: 
+	</li>
+	
+	<li>
+	  val: 
+	</li>
+	
+</ul>
+
+
+
+
+
+
+
+
+</dd>
+
+
+
+
+<dt><a name="table.reverse"></a><strong>table.reverse</strong>&nbsp;(t)</dt>
+<dd>
+Reverses order of values in a table using their index table.reverse {'one','two','three'} => {'three', 'two', 'one'}
+
+
+<h3>Parameters</h3>
+<ul>
+	
+	<li>
+	  t: 
+	</li>
+	
+</ul>
+
+
+
+
+
+
+
+
+</dd>
+
+
+
+
+<dt><a name="table.shuffle"></a><strong>table.shuffle</strong>&nbsp;(t)</dt>
+<dd>
+table.shuffle(t) returns a shuffled table
+
+
+<h3>Parameters</h3>
+<ul>
+	
+	<li>
+	  t: 
+	</li>
+	
+</ul>
+
+
+
+
+
+
+
+
+</dd>
+
+
+
+
+<dt><a name="table.sorted"></a><strong>table.sorted</strong>&nbsp;(t, comp)</dt>
+<dd>
+table.sorted(t, [comp]) is the same as table.sort(t, comp) except it returns a sorted copy of t, leaving the original unchanged. [comp] is an optional comparison function, defaulting to less-than.
+
+
+<h3>Parameters</h3>
+<ul>
+	
+	<li>
+	  t: 
+	</li>
+	
+	<li>
+	  comp: 
+	</li>
+	
+</ul>
+
+
+
+
+
+
+
+
+</dd>
+
+
+
+
+<dt><a name="table.subset"></a><strong>table.subset</strong>&nbsp;(t1, t2)</dt>
+<dd>
+table.subset(t1,t2) returns true iff every key/value pair in t1 is also in t2
+
+
+<h3>Parameters</h3>
+<ul>
+	
+	<li>
+	  t1: 
+	</li>
+	
+	<li>
+	  t2: 
+	</li>
+	
+</ul>
+
+
+
+
+
+
+
+
+</dd>
+
+
+
+
+<dt><a name="table.subtract"></a><strong>table.subtract</strong>&nbsp;(t1, t2)</dt>
+<dd>
+Remove all keys in t2 from t1.
+
+
+<h3>Parameters</h3>
+<ul>
+	
+	<li>
+	  t1: 
+	</li>
+	
+	<li>
+	  t2: 
+	</li>
+	
+</ul>
+
+
+
+
+
+
+
+
+</dd>
+
+
+
+
+<dt><a name="table.unique"></a><strong>table.unique</strong>&nbsp;(t)</dt>
+<dd>
+Returns a new table with unique values
+
+
+<h3>Parameters</h3>
+<ul>
+	
+	<li>
+	  t: 
+	</li>
+	
+</ul>
+
+
+
+
+
+
+
+
+</dd>
+
+
+
+
+<dt><a name="table.values"></a><strong>table.values</strong>&nbsp;(t)</dt>
+<dd>
+table.values(t) Return a list of the values of t, in unspecified order.
+
+
+<h3>Parameters</h3>
+<ul>
+	
+	<li>
+	  t: 
+	</li>
+	
+</ul>
+
+
+
+
+
+
+
+
+</dd>
+
+
+</dl>
+
+
+
+
+
+
+
+</div> <!-- id="content" -->
+
+</div> <!-- id="main" -->
+
+<div id="about">
+	<p><a href="http://validator.w3.org/check?uri=referer"><img src="http://www.w3.org/Icons/valid-xhtml10" alt="Valid XHTML 1.0!" height="31" width="88" /></a></p>
+</div> <!-- id="about" -->
+
+</div> <!-- id="container" -->	
+</body>
+</html>

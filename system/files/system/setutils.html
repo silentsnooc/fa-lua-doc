@@ -1,0 +1,341 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+    <title>Reference</title>
+    <link rel="stylesheet" href="../../luadoc.css" type="text/css" />
+	<!--meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/-->
+</head>
+
+<body>
+<div id="container">
+
+<div id="product">
+	<div id="product_logo"></div>
+	<div id="product_name"><big><b></b></big></div>
+	<div id="product_description"></div>
+</div> <!-- id="product" -->
+
+<div id="main">
+
+<div id="navigation">
+
+
+<h1>LuaDoc</h1>
+<ul>
+	
+	<li><a href="../../index.html">Index</a></li>
+	
+</ul>
+
+
+<!-- Module list -->
+
+
+
+<!-- File list -->
+
+<h1>Files</h1>
+<ul>
+
+	<li>
+		<a href="../../files/system/Blueprints.html">system/Blueprints.lua</a>
+	</li>
+
+	<li>
+		<a href="../../files/system/GlobalBaseTemplate.html">system/GlobalBaseTemplate.lua</a>
+	</li>
+
+	<li>
+		<a href="../../files/system/GlobalBuilderGroup.html">system/GlobalBuilderGroup.lua</a>
+	</li>
+
+	<li>
+		<a href="../../files/system/GlobalBuilderTemplate.html">system/GlobalBuilderTemplate.lua</a>
+	</li>
+
+	<li>
+		<a href="../../files/system/GlobalPlatoonTemplate.html">system/GlobalPlatoonTemplate.lua</a>
+	</li>
+
+	<li>
+		<a href="../../files/system/class.html">system/class.lua</a>
+	</li>
+
+	<li>
+		<a href="../../files/system/dkson.html">system/dkson.lua</a>
+	</li>
+
+	<li>
+		<a href="../../files/system/repr.html">system/repr.lua</a>
+	</li>
+
+	<li><strong>system/setutils.lua</strong></li>
+	
+	<li>
+		<a href="../../files/system/utils.html">system/utils.lua</a>
+	</li>
+
+</ul>
+
+
+
+
+
+
+</div> <!-- id="navigation" -->
+
+<div id="content">
+
+<h1>File <code>system/setutils.lua</code></h1>
+
+
+
+
+
+
+
+<h2>Functions</h2>
+<table class="function_list">
+
+	<tr>
+	<td class="name" nowrap><a href="#DestructiveUnion">DestructiveUnion</a>&nbsp;(a, b)</td>
+	<td class="summary">Replaces a with a ∪ b </td>
+	</tr>
+
+	<tr>
+	<td class="name" nowrap><a href="#Empty">Empty</a>&nbsp;(A)</td>
+	<td class="summary">Returns true iff A is the empty set </td>
+	</tr>
+
+	<tr>
+	<td class="name" nowrap><a href="#Intersection">Intersection</a>&nbsp;(a, b)</td>
+	<td class="summary">Returns a ∩ b as a new set </td>
+	</tr>
+
+	<tr>
+	<td class="name" nowrap><a href="#PredicateFilter">PredicateFilter</a>&nbsp;(A, p)</td>
+	<td class="summary">Returns the set S = {a ∈ A.p(a)} </td>
+	</tr>
+
+	<tr>
+	<td class="name" nowrap><a href="#Subtract">Subtract</a>&nbsp;(a, b)</td>
+	<td class="summary">Returns a \ b as a new set </td>
+	</tr>
+
+	<tr>
+	<td class="name" nowrap><a href="#Union">Union</a>&nbsp;(a, b)</td>
+	<td class="summary">Returns a ∪ b as a new set </td>
+	</tr>
+
+</table>
+
+
+
+
+
+
+<br/>
+<br/>
+
+
+
+
+<h2><a name="functions"></a>Functions</h2>
+<dl class="function">
+
+
+
+<dt><a name="DestructiveUnion"></a><strong>DestructiveUnion</strong>&nbsp;(a, b)</dt>
+<dd>
+Replaces a with a ∪ b
+
+
+<h3>Parameters</h3>
+<ul>
+	
+	<li>
+	  a: 
+	</li>
+	
+	<li>
+	  b: 
+	</li>
+	
+</ul>
+
+
+
+
+
+
+
+
+</dd>
+
+
+
+
+<dt><a name="Empty"></a><strong>Empty</strong>&nbsp;(A)</dt>
+<dd>
+Returns true iff A is the empty set
+
+
+<h3>Parameters</h3>
+<ul>
+	
+	<li>
+	  A: 
+	</li>
+	
+</ul>
+
+
+
+
+
+
+
+
+</dd>
+
+
+
+
+<dt><a name="Intersection"></a><strong>Intersection</strong>&nbsp;(a, b)</dt>
+<dd>
+Returns a ∩ b as a new set
+
+
+<h3>Parameters</h3>
+<ul>
+	
+	<li>
+	  a: 
+	</li>
+	
+	<li>
+	  b: 
+	</li>
+	
+</ul>
+
+
+
+
+
+
+
+
+</dd>
+
+
+
+
+<dt><a name="PredicateFilter"></a><strong>PredicateFilter</strong>&nbsp;(A, p)</dt>
+<dd>
+Returns the set S = {a ∈ A.p(a)}
+
+
+<h3>Parameters</h3>
+<ul>
+	
+	<li>
+	  A: 
+	</li>
+	
+	<li>
+	  p: 
+	</li>
+	
+</ul>
+
+
+
+
+
+
+
+
+</dd>
+
+
+
+
+<dt><a name="Subtract"></a><strong>Subtract</strong>&nbsp;(a, b)</dt>
+<dd>
+Returns a \ b as a new set
+
+
+<h3>Parameters</h3>
+<ul>
+	
+	<li>
+	  a: 
+	</li>
+	
+	<li>
+	  b: 
+	</li>
+	
+</ul>
+
+
+
+
+
+
+
+
+</dd>
+
+
+
+
+<dt><a name="Union"></a><strong>Union</strong>&nbsp;(a, b)</dt>
+<dd>
+Returns a ∪ b as a new set
+
+
+<h3>Parameters</h3>
+<ul>
+	
+	<li>
+	  a: 
+	</li>
+	
+	<li>
+	  b: 
+	</li>
+	
+</ul>
+
+
+
+
+
+
+
+
+</dd>
+
+
+</dl>
+
+
+
+
+
+
+
+</div> <!-- id="content" -->
+
+</div> <!-- id="main" -->
+
+<div id="about">
+	<p><a href="http://validator.w3.org/check?uri=referer"><img src="http://www.w3.org/Icons/valid-xhtml10" alt="Valid XHTML 1.0!" height="31" width="88" /></a></p>
+</div> <!-- id="about" -->
+
+</div> <!-- id="container" -->	
+</body>
+</html>
