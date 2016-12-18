@@ -1,0 +1,1 @@
+ldoc -a -s ldoc/ -d lua/ ../fa/lua/
