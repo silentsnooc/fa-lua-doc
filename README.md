@@ -27,3 +27,7 @@ Get into `git/faforever/fa-lua-doc` and run either `makeall.cmd` if you're using
     ldoc -a -s ldoc/ -d lua/ ../fa/lua/
     
 *Note:* Make sure `ldoc` is available. Under Windows it was necessary to add `<luarocks-install-dir>\systree\bin` to my environment. 
+
+**Windows Troubleshooting:**
+
+If you get strange compile errors with `luarocks`, click start and search for the Visual C++ 2015 x86 Native Build Tools Command Prompt, such a nice name, and run the installations in that command prompt. Don't ask me.
