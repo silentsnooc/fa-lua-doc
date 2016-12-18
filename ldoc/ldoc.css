@@ -199,6 +199,9 @@ table.index td { text-align: left; vertical-align: top; }
 #content {
 	padding: 40px;
 	height: calc(100% - 80px);
+	width: 100%;
+	max-width: calc(100% - 400px);
+	
 	position: absolute;
 	overflow: auto;
 	margin-left: 320px;
