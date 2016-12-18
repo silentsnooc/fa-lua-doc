@@ -1,6 +1,6 @@
 # fa-lua-doc
 
-How to generate documentation for the Supreme Commander FAF mod using [ldoc](https://github.com/stevedonovan/LDoc).
+How to generate documentation for the Supreme Commander FAF mod using [LDoc](https://github.com/stevedonovan/LDoc). It's recommended to take a look at its [documentation](https://stevedonovan.github.io/ldoc/manual/doc.md.html).
 
 ----
 
