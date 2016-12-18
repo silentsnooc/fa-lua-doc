@@ -24,7 +24,7 @@ and also the FAF mod from https://github.com/FAForever/fa
     
 Get into `git/faforever/fa-lua-doc` and run either `makeall.cmd` if you're using Windows or execute:
 
-    ldoc -a -s ldoc/ -d lua/ ../fa/lua/
+    ldoc -a -c ldoc/config.ld -s ldoc/ -d lua/ ../fa/lua/
     
 *Note:* Make sure `ldoc` is available. Under Windows it was necessary to add `<luarocks-install-dir>\systree\bin` to my environment. 
 
