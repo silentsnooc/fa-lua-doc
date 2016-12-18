@@ -4,8 +4,8 @@ How to generate documentation for the Supreme Commander FAF mod using [ldoc](htt
 
 ----
 
-Install `luarocks`. We have to install rocks for [LuaFileSystem](https://keplerproject.github.io/luafilesystem/) 
-and [Penlight](https://github.com/stevedonovan/Penlight) first:
+First, install `luarocks`. After that have to install some these two rocks: [LuaFileSystem](https://keplerproject.github.io/luafilesystem/) 
+and [Penlight](https://github.com/stevedonovan/Penlight) which translates to:
 
     luarocks install luafilesystem
     luarocks install penlight
