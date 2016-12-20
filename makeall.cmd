@@ -1,1 +1,1 @@
-ldoc -a -c ldoc/config.ld -s ldoc/ -d lua/ ../fa/
+ldoc -a -c ldoc/config.ld -s ldoc/ -d fa/ ../fa/
